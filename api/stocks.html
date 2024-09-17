@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Stocks</title>
+</head>
+<body>
+    <h1>Top 5 Stocks with the Highest Recommendation</h1>
+    <table>
+        <tr>
+            <th>Ticker</th>
+            <th>Company</th>
+            <th>Market Cap</th>
+            <th>Recom</th>
+        </tr>
+        {% for ticker, stock in stocks.items() %}
+        <tr>
+            <td>{{ ticker }}</td>
+            <td>{{ stock.Company }}</td>
+            <td>{{ stock['Market Cap'] }}</td>
+            <td>{{ stock.Recom }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
