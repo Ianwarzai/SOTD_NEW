@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/LoginPage.js'; // Adjust paths as needed
-import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SignupPage.js';
+import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD_NEW/web/src/components/LoginPage.js'; // Adjust paths as needed
+import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD_NEW/web/src/components/SignupPage.js';
 import SuccessPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SuccessPage.js';  // Importing SuccessPage component
 import { Navbar } from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/Navbar.js';
 
