@@ -5,8 +5,8 @@ import { Home, SOTD, About, Contact } from './modules';
 import { Navbar } from './core/components/Navbar';
 
 // Import the new Login and Signup components
-import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/LoginPage.js';
-import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SignupPage.js';
+import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD_NEW/web/src/components/LoginPage.js';
+import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD_NEW/web/src/components/SignupPage.js';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
