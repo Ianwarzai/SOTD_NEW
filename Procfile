@@ -1,1 +1,2 @@
-web: gunicorn src.sotd:app
+web: gunicorn web.src.sotd:app
+
