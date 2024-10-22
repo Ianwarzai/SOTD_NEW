@@ -1,5 +1,6 @@
 # Ignore Python virtual environments
 venv/
+<<<<<<< HEAD
 VENV/
 .env
 
@@ -18,3 +19,7 @@ npm-debug.log*
 
 # Ignore MacOS system files
 .DS_Store
+=======
+venv/
+venv/
+>>>>>>> 3d189c6bf (Removed venv directory and added to .gitignore)

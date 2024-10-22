@@ -21,7 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
 
 # Ignore node_modules
 node_modules/
@@ -45,5 +44,3 @@ __pycache__/
 
 # Log files
 *.log
-=======
->>>>>>> 1cc8ea22f (Initial commit of SOTD project)
