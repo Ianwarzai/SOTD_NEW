@@ -3,6 +3,8 @@ import pandas as pd
 import concurrent.futures
 import random
 
+
+
 # Dictionary to store the last entry and exit points for each stock
 price_cache = {}
 
@@ -12,7 +14,7 @@ def fetch_sp500_tickers():
   return table['Symbol'].tolist()
 
 def fetch_penny_stock_tickers():
-  df = pd.read_csv("penny_stocks.csv", header=None)
+  df = pd.read_csv("penny_stocks.csv", header=None) 
   return df[0].tolist()
 
 def fetch_stock_data(ticker):
