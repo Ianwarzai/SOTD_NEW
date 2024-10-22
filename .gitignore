@@ -1,6 +1,20 @@
+# Ignore Python virtual environments
 venv/
-venv/
-venv/
+VENV/
+.env
 
-# Local Netlify folder
-.netlify
+# Ignore node modules
+node_modules/
+
+# Ignore local Netlify folder
+.netlify/
+
+# Ignore build files
+build/
+
+# Ignore log files and other unwanted temporary files
+*.log
+npm-debug.log*
+
+# Ignore MacOS system files
+.DS_Store
