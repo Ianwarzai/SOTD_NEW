@@ -49,7 +49,7 @@ sympy==1.13.1
 tenacity==8.2.2
 tokenizers==0.19.1
 tomli==2.0.1
-torch==2.4.0
+torch==2.4.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 tqdm==4.65.0
 transformers==4.44.0
 typing_extensions==4.12.2
