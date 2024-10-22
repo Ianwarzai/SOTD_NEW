@@ -29,3 +29,18 @@ web/node_modules/
 # Ignore cache
 .cache/
 web/node_modules/.cache/
+
+# Ignore virtual environment
+venv/
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite database
+*.sqlite
+
+# Log files
+*.log
