@@ -26,9 +26,12 @@ yarn-error.log*
 node_modules/
 web/node_modules/
 
-# Ignore cache
+# Ignore node_modules and cache
+node_modules/
+web/node_modules/
 .cache/
 web/node_modules/.cache/
+
 
 # Ignore virtual environment
 venv/

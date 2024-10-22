@@ -1,57 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-<<<<<<< HEAD
-import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD_NEW/web/src/components/LoginPage.js'; // Adjust paths as needed
-import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD_NEW/web/src/components/SignupPage.js';
-=======
-import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/LoginPage.js'; // Adjust paths as needed
-import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SignupPage.js';
->>>>>>> 1cc8ea22f (Initial commit of SOTD project)
-import SuccessPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SuccessPage.js';  // Importing SuccessPage component
-import { Navbar } from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/Navbar.js';
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { ROUTES } from './core';
+import { Home, SOTD, About, Contact } from './modules';
+import { Navbar } from './core/components/Navbar';
 
+// Import the new Login, Signup, and Success components
+import LoginPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/LoginPage.js';
+import SignupPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SignupPage.js';
+import SuccessPage from '/Users/ismaelanwarzai/Desktop/SOTD/web/src/core/components/SuccessPage.js';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState(''); // State to track the logged-in user's email
+  const [darkMode, setDarkMode] = useState(false); // State for dark mode
 
+  // Check if the user is already logged in when the app loads
   useEffect(() => {
-    // Check if the user is already logged in when the app loads
     const loggedInStatus = localStorage.getItem('isLoggedIn');
     const userEmail = localStorage.getItem('email');
 
     if (loggedInStatus === 'true' && userEmail) {
-      setIsLoggedIn(true); // Update state if user is logged in
-      setEmail(userEmail); // Set the email of the logged-in user
+      setIsLoggedIn(true);
+      setEmail(userEmail);
     }
   }, []);
 
   const handleLogin = (email) => {
-    localStorage.setItem('isLoggedIn', 'true'); // Set login status
-    localStorage.setItem('email', email); // Store email in localStorage
-    setIsLoggedIn(true); // Set login state to true
-    setEmail(email); // Set email in state
+    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('email', email);
+    setIsLoggedIn(true);
+    setEmail(email);
   };
 
   const handleLogout = () => {
-    localStorage.setItem('isLoggedIn', 'false'); // Set login status to false
-    localStorage.removeItem('email'); // Remove email from localStorage
-    setIsLoggedIn(false); // Update state to log out the user
-    setEmail(''); // Clear email state
+    localStorage.setItem('isLoggedIn', 'false');
+    localStorage.removeItem('email');
+    setIsLoggedIn(false);
+    setEmail('');
+  };
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
   };
 
   return (
     <Router>
-      <Navbar isLoggedIn={isLoggedIn} email={email} handleLogout={handleLogout} />
-      <Switch>
-        <Route path="/login">
-          <LoginPage onLogin={handleLogin} />
-        </Route>
-        <Route path="/signup">
-          <SignupPage />
-        </Route>
-        {/* Add other routes here */}
-      </Switch>
+      <Navbar
+        isLoggedIn={isLoggedIn}
+        email={email}
+        handleLogout={handleLogout}
+        darkMode={darkMode}
+        toggleTheme={toggleTheme}
+      />
+      <Routes>
+        <Route path={ROUTES.HOME_PATH} element={<Home />} />
+        <Route path={ROUTES.SOTD_PATH} element={<SOTD />} />
+        <Route path={ROUTES.ABOUT_PATH} element={<About />} />
+        <Route path={ROUTES.CONTACT_PATH} element={<Contact />} />
+
+        {/* Add the new Login, Signup, and Success routes */}
+        <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/success" element={<SuccessPage />} />
+      </Routes>
     </Router>
   );
 };
