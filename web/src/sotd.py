@@ -7,6 +7,8 @@ import numpy as np
 import random
 import subprocess
 import os
+from stock_data_service import filter_stocks
+
 
 app = Flask(__name__)
 CORS(app)
