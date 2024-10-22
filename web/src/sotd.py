@@ -7,7 +7,9 @@ import numpy as np
 import random
 import subprocess
 import os
-from web.src.stock_data_service import filter_stocks
+
+
+
 
 
 
