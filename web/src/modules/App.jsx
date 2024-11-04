@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './modules/About/About';
+import About from './modules/About/About.jsx';
 import TermsOfService from './modules/About/TermsOfService';
 
 const App = () => {

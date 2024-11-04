@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "sotd",
   "description": "",
   "version": "1.0.0",
@@ -11,8 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-=======
->>>>>>> 1cc8ea22f (Initial commit of SOTD project)
   "dependencies": {
     "@sendgrid/mail": "^8.1.3",
     "@stripe/react-stripe-js": "^2.8.0",
@@ -39,10 +36,7 @@
     "react-google-recaptcha": "^3.1.0",
     "react-player": "^2.16.0",
     "react-router-dom": "^6.26.1",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
-=======
->>>>>>> 1cc8ea22f (Initial commit of SOTD project)
     "react-validation": "^3.0.7",
     "stream-browserify": "^3.0.0",
     "stripe": "^16.10.0",
@@ -53,7 +47,6 @@
     "yahoo-finance": "^0.3.8",
     "yfinance": "^0.0.6"
   },
-<<<<<<< HEAD
   "engines": {
     "node": "20.x"
   },
@@ -69,16 +62,4 @@
       "last 1 safari version"
     ]
   }
-=======
-  "name": "sotd",
-  "description": "",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
->>>>>>> 1cc8ea22f (Initial commit of SOTD project)
 }
