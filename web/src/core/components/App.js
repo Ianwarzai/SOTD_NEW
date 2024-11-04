@@ -5,9 +5,9 @@ import { Home, SOTD, About, Contact } from './modules';
 import { Navbar } from './core/components/Navbar';
 
 // Import the new Login, Signup, and Success components
-import LoginPage from 'src/core/components/LoginPage.js';
-import SignupPage from 'src/core/components/SignupPage.js';
-import SuccessPage from 'src/core/components/SuccessPage.js';
+import LoginPage from './core/components/LoginPage';
+import SignupPage from './core/components/SignupPage';
+import SuccessPage from './core/components/SuccessPage';
 
 
 const App = () => {
