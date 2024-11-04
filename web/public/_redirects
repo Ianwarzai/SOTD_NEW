@@ -1,1 +1,2 @@
-/api/*    http://sotd.ai/api/:splat   200
+/api/*    http://127.0.0.1:5001/api/:splat   200
+/*        /index.html                        200
