@@ -460,18 +460,19 @@ useEffect(() => {
 
 
     axios
-      .get('http://localhost:5001/api/filtered_stocks')
-      .then((response) => {
-        setData(response.data);
-        setContentLoaded(true);
-        setLoading(false);
-        clearInterval(messageInterval);
-      })
-      .catch((error) => {
-        console.log('ERROR:', error);
-        setLoading(false);
-        clearInterval(messageInterval);
-      });
+  .get('https://sotd.ai/api/filtered_stocks') // Update to the live backend URL
+  .then((response) => {
+    setData(response.data);
+    setContentLoaded(true);
+    setLoading(false);
+    clearInterval(messageInterval);
+  })
+  .catch((error) => {
+    console.log('ERROR:', error);
+    setLoading(false);
+    clearInterval(messageInterval);
+  });
+
 
 
     return () => clearInterval(messageInterval);
