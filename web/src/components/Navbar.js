@@ -52,29 +52,12 @@ const NavbarContainer = styled.div`
 export const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState(ROUTES.HOME_PATH);
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loggedInEmail, setLoggedInEmail] = useState('');
 
   useEffect(() => {
     const currentPath = window.location.pathname;
     setSelectedTab(currentPath);
     setCurrentPath(currentPath);
-
-    const loggedInStatus = localStorage.getItem('isLoggedIn');
-    const userEmail = localStorage.getItem('email');
-    setIsLoggedIn(loggedInStatus === 'true');
-    if (loggedInStatus === 'true' && userEmail) {
-      const username = userEmail.split('@')[0];
-      setLoggedInEmail(username);
-    }
   }, []);
-
-  const handleLogout = () => {
-    localStorage.setItem('isLoggedIn', 'false');
-    localStorage.removeItem('email');
-    setIsLoggedIn(false);
-    setLoggedInEmail('');
-  };
 
   return (
     <NavbarContainer>
@@ -90,12 +73,6 @@ export const Navbar = () => {
       <NavLink to={ROUTES.CONTACT_PATH} selected={selectedTab === ROUTES.CONTACT_PATH} onClick={() => setSelectedTab(ROUTES.CONTACT_PATH)}>
         CONTACT
       </NavLink>
-      {isLoggedIn ? (
-        <div>
-          <span>{loggedInEmail}</span>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      ) : null}
     </NavbarContainer>
   );
 };
